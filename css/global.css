@@ -178,6 +178,10 @@ header .logo {
 	display: flex;
 	height: calc(100% - 72px);
 
+	.contents {
+		width: 100%;
+	}
+
 	aside {
 		width: 320px;
 		background-color: #f0f0f0;
