@@ -1,0 +1,25 @@
+*{box-sizing: border-box;}
+html,body{width:100%;height:100%;margin:0; padding: 0;}
+.outer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width:100%;
+	height: 100%;
+	padding: 0 50px;
+	img {
+		width: 100px;
+	}
+	h1{
+		font-size: 2.3rem;
+		text-align: center;
+	}
+	.warning{
+		padding:10px 30px 10px 40px;
+		border: 1px solid #E92C2C;
+		border-radius: 8px;
+		background: #FEF4F4 url(../imgs/ico_warning.png) no-repeat 10px center;
+		background-size: 25px auto;
+	}
+}
