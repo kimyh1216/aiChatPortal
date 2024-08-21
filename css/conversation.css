@@ -62,13 +62,13 @@
 							display: flex;
 
 							.inner {
-								background-color: #f7e7ea;
-								border-color: #d292a2;
+								background-color: #f9eaea;
+								border-color: #e49999;
 							}
 
 							.reason {
 								padding: 8px 0 0 8px;
-								color: #a52546;
+								color: #c93333;
 								font-size: 13px;
 							}
 						}
@@ -83,8 +83,8 @@
 							display: flex;
 
 							.inner {
-								background-color: #e8edf6;
-								border-color: #7f9ac6;
+								background-color: #eaf3f9;
+								border-color: #99c4e4;
 							}
 
 							.reason {
@@ -103,6 +103,12 @@
 
 					.ico {
 						background-image: url(../imgs/ico_dialogue_user.png);
+					}
+
+					.message {
+						.inner {
+							border-color: #bf95d9;
+						}
 					}
 				}
 

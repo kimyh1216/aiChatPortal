@@ -23,7 +23,7 @@ header {
 	padding: 0 30px 0 14px;
 	background: #0088c7 url(../imgs/bg_header.png);
 	box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
-	z-index: 10;
+	z-index: 20;
 }
 
 header .logo {
@@ -179,6 +179,7 @@ header .logo {
 		bottom: 0;
 		width: 320px;
 		background-color: #f0f0f0;
+		z-index: 10;
 
 		.newChat {
 			padding: 20px 0;
@@ -190,11 +191,12 @@ header .logo {
 				position: relative;
 
 				&.header {
-					padding: 20px 30px;
-					font-size: 1.125rem;
-					font-weight: 700;
+					padding: 10px 30px;
+					font-size: 1rem;
+					font-weight: 500;
 					border: 1px solid rgba(123, 123, 123, .3);
 					border-width: 1px 0;
+					color: #4c4c4c;
 
 					&:after {
 						content: "";
@@ -224,11 +226,23 @@ header .logo {
 						}
 
 						li {
+							position: relative;
 							margin-top: 15px;
-							padding-right: 20px;
-							text-overflow: ellipsis;
-							white-space: nowrap;
-							overflow: hidden;
+
+							.link {
+								display: block;
+								padding-right: 20px;
+								text-decoration: none;
+								color: #333;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								overflow: hidden;
+
+								&:before {
+									content: "\00B7 "
+								}
+
+							}
 
 							.btn-more {
 								position: absolute;
@@ -238,6 +252,90 @@ header .logo {
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+.detailBox {
+	display: none;
+	position: absolute;
+	right: -125px;
+	top: -5px;
+	width: 120px;
+	min-height: 124px;
+	padding: 20px;
+	background-color: #3389c9;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	z-index: 20;
+
+	&.active {
+		display: block;
+	}
+
+	ul {
+		li {
+
+			&:first-of-type {
+				margin-top: 0 !important;
+			}
+
+			a {
+				display: flex;
+				width: 100%;
+				text-decoration: none;
+
+				p {
+					display: inline-block;
+					padding-right: 0 !important;
+					color: #fff;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+
+				&:hover {
+					p {
+						color: #99c4e4;
+
+					}
+
+					.ico {
+						&.export {
+							background-image: url(../imgs/ico_export_on.png);
+						}
+
+						&.rename {
+							background-image: url(../imgs/ico_rename_on.png);
+						}
+
+						&.delete {
+							background-image: url(../imgs/ico_trash_on.png);
+						}
+					}
+				}
+			}
+
+			.ico {
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				margin-right: 5px;
+				background-repeat: no-repeat;
+				background-position: center;
+
+				&.export {
+					background-image: url(../imgs/ico_export.png);
+				}
+
+				&.rename {
+					background-image: url(../imgs/ico_rename.png);
+				}
+
+				&.delete {
+					background-image: url(../imgs/ico_trash.png);
 				}
 			}
 		}
