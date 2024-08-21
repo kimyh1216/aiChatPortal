@@ -9,7 +9,8 @@ body {
 	color: #232323;
 }
 
-textarea {
+textarea,
+input {
 	font-family: 'Spoqa Han Sans Neo';
 }
 
@@ -265,7 +266,7 @@ header .logo {
 	top: -5px;
 	width: 120px;
 	min-height: 124px;
-	padding: 20px;
+	padding: 20px 15px;
 	background-color: #3389c9;
 	border-radius: 8px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
@@ -297,30 +298,13 @@ header .logo {
 				}
 
 				&:hover {
-					p {
-						color: #99c4e4;
-
-					}
-
-					.ico {
-						&.export {
-							background-image: url(../imgs/ico_export_on.png);
-						}
-
-						&.rename {
-							background-image: url(../imgs/ico_rename_on.png);
-						}
-
-						&.delete {
-							background-image: url(../imgs/ico_trash_on.png);
-						}
-					}
+					opacity: 0.6;
 				}
 			}
 
 			.ico {
 				display: inline-block;
-				width: 15px;
+				min-width: 15px;
 				height: 15px;
 				margin-right: 5px;
 				background-repeat: no-repeat;
