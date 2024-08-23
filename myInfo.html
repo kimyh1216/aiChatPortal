@@ -228,104 +228,83 @@
 		</div>
 	</div>
 	<div class="dimmed active"></div>
-	<div class="tokenUsage active">
+	<div class="myInfo active">
 		<button class="btn-close"></button>
-		<div class="token">
-			<div class="icon">
-				<h1 class="title">Token</h1>
-				<!--
-				Low, Mid, High일경우 이미지명을 변경해주세요.
-				<img src="./imgs/ico_token_low.png" />
-				<img src="./imgs/ico_token_mid.png" />
-				-->
-				<img src="./imgs/ico_token_high.png" />
-				<div class="value">High</div><!-- Low,Middle,High 값이 있는게 명시적으로 좋을거같아서 넣어봤습니다. 필요없을시 그냥 삭제하시면 됩니다.-->
-			</div>
-			<div class="info">
+		<div class="info">
+			<h1 class="title">My Info</h1>
+			<div class="data">
 				<ul>
 					<li>
-						<span class="tit">Total Token</span>
-						<span class="value">5.0000</span>
+						<span class="tit">Name</span>
+						<span class="value">John Doe</span>
 					</li>
 					<li>
-						<span class="tit">Token used</span>
-						<span class="value">5.0000</span>
+						<span class="tit">Position</span>
+						<span class="value">Senoir Engineer</span>
 					</li>
 					<li>
-						<span class="tit">Request</span>
-						<input type="text">
-						<button class="btn-request">Request</button>
+						<span class="tit">Department</span>
+						<span class="value">DT Team</span>
+					</li>
+					<li>
+						<span class="tit">Delete all chat</span>
+						<button class="btn-request">Delete all</button>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="useage">
-			<h1 class="title">Useage</h1>
-			<div class="graph">
+		<div class="info preference">
+			<h1 class="title">Preference</h1>
+			<div class="data">
 				<ul>
 					<li>
-						<div class="bar_wrap">
-							<div class="bar" style="height:44%"></div>
-						</div>
-						<div class="days">
-							-6 Day
-						</div>
+						<span class="tit">Temperature</span>
+						<span class="value">
+							<select>
+								<option value="a">보다 창의적</option>
+								<option value="b">보다 창의적</option>
+								<option value="c">보다 창의적</option>
+								<option value="d">보다 창의적</option>
+							</select>
+						</span>
 					</li>
 					<li>
-						<div class="bar_wrap">
-							<div class="bar" style="height:100%"></div>
-						</div>
-						<div class="days">
-							-5 Day
-						</div>
+						<span class="tit">Position</span>
+						<span class="value">
+							<select>
+								<option value="a">한국어</option>
+								<option value="b">영어</option>
+								<option value="c">일본어</option>
+								<option value="d">중국어</option>
+							</select>
+						</span>
 					</li>
 					<li>
-						<div class="bar_wrap">
-							<div class="bar" style="height:44%"></div>
-						</div>
-						<div class="days">
-							-4 Day
-						</div>
+						<span class="tit">Department</span>
+						<span class="value">
+							<label class="ios7-switch">
+								<input type="checkbox" checked>
+								<span></span>
+							</label>
+						</span>
 					</li>
 					<li>
-						<div class="bar_wrap">
-							<div class="bar" style="height:50%"></div>
-						</div>
-						<div class="days">
-							-3 Day
-						</div>
-					</li>
-					<li>
-						<div class="bar_wrap">
-							<div class="bar" style="height:55%"></div>
-						</div>
-						<div class="days">
-							-2 Day
-						</div>
-					</li>
-					<li>
-						<div class="bar_wrap">
-							<div class="bar" style="height:55%"></div>
-						</div>
-						<div class="days">
-							-1 Day
-						</div>
-					</li>
-					<li>
-						<div class="bar_wrap">
-							<div class="bar" style="height:35%"></div>
-						</div>
-						<div class="days">
-							Today
-						</div>
+						<span class="tit">Delete all chat</span>
+						<span class="value">
+							<label class="ios7-switch">
+								<input type="checkbox">
+								<span></span>
+							</label>
+						</span>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="footer">
-			<button class="btn-confirm">확인</button>
+			<button class="btn-confirm ico-save">Save</button>
 		</div>
 	</div>
+
 </body>
 
 </html>

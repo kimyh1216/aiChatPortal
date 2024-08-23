@@ -14,6 +14,13 @@ input {
 	font-family: 'Spoqa Han Sans Neo';
 }
 
+select {
+	width: 100%;
+	padding: 5px 5px;
+	border: 1px solid #e2e8f0;
+	outline: none;
+}
+
 header {
 	position: fixed;
 	display: flex;
@@ -342,17 +349,30 @@ header .logo {
 }
 
 .tokenUsage {
+	display: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 550px;
-	height: 430px;
+	height: 450px;
 	padding: 20px 45px;
 	background-color: #fff;
 	border-radius: 10px;
 	transform: translate(-50%, -50%);
 	z-index: 200;
 	box-shadow: 0 0 5px rgba(0, 0, 0.1);
+
+	&.active {
+		display: block;
+	}
+
+	.btn-close {
+		position: absolute;
+		right: 28px;
+		top: 20px;
+		width: 17px;
+		height: 17px;
+	}
 
 	.title {
 		font-size: 1.125rem;
@@ -361,7 +381,8 @@ header .logo {
 
 	.token {
 		display: flex;
-		padding-bottom: 25px;
+		padding-bottom: 15px;
+		margin-top: 10px;
 
 		.icon {
 			width: 120px;
@@ -372,6 +393,11 @@ header .logo {
 			}
 		}
 
+		.value {
+			font-size: .725rem;
+			color: #666;
+		}
+
 		.info {
 			padding-left: 20px;
 
@@ -379,11 +405,11 @@ header .logo {
 				display: flex;
 				flex-direction: column;
 				gap: 10px;
-				margin-top: 5px;
 
 				li {
 					display: flex;
 					align-items: center;
+					min-height: 26px;
 					font-size: 0.875rem;
 
 					.tit {
@@ -415,7 +441,7 @@ header .logo {
 	}
 
 	.useage {
-		height: 250px;
+		height: 260px;
 		border-top: 1px solid #a5a5a5;
 		padding-top: 20px;
 
@@ -464,12 +490,113 @@ header .logo {
 	}
 
 	.footer {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		padding-right: 40px;
+		padding-bottom: 20px;
 		text-align: right;
+	}
+}
 
-		.btn-confirm {
-			margin-right: -20px;
-			padding: 6px 30px;
+.myInfo {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 550px;
+	height: 450px;
+	padding: 40px 45px;
+	background-color: #fff;
+	border-radius: 10px;
+	transform: translate(-50%, -50%);
+	z-index: 200;
+	box-shadow: 0 0 5px rgba(0, 0, 0.1);
+
+	&.active {
+		display: block;
+	}
+
+	.btn-close {
+		position: absolute;
+		right: 28px;
+		top: 20px;
+		width: 17px;
+		height: 17px;
+	}
+
+	.title {
+		font-size: 1.125rem;
+		font-weight: 700;
+	}
+
+	.info {
+		display: flex;
+		padding-bottom: 25px;
+
+		&.preference {
+			padding-top: 20px;
+			border-top: 1px solid #ccc;
 		}
+
+		.title {
+			width: 120px;
+		}
+
+		.data {
+			flex: 1;
+			padding-left: 20px;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				li {
+					display: flex;
+					align-items: center;
+					min-height: 26px;
+					font-size: 0.875rem;
+
+					.tit {
+						display: inline-block;
+						min-width: 40%;
+						color: #232323;
+					}
+
+					.value {
+						display: inline-block;
+						width: 60%;
+						padding-left: 10px;
+						color: #6c6c6c;
+					}
+
+					input {
+						display: inline-block;
+						width: 50%;
+						margin-right: 10px;
+						padding-left: 10px;
+						color: #6c6c6c;
+						border: 1px solid #e2e8f0;
+						border-radius: 4px;
+						outline: none;
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		padding-right: 40px;
+		padding-bottom: 20px;
+		text-align: right;
 	}
 }
 
@@ -487,10 +614,125 @@ header .logo {
 
 .btn-confirm {
 	display: inline-block;
-	padding: 4px 10px;
+	min-width: 90px;
+	padding: 7px 20px;
 	border-radius: 30px;
 	font-size: 0.875rem;
 	font-weight: 700;
 	letter-spacing: -0.45px;
 	background-color: #3389c9;
+
+	&.ico-save {
+		padding: 7px 20px;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 15px;
+			height: 14px;
+			margin-right: 4px;
+			background: url(../imgs/ico_save.png) no-repeat center;
+		}
+	}
+}
+
+.ios7-switch {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
+}
+
+.ios7-switch input {
+	opacity: 0;
+	position: absolute;
+}
+
+.ios7-switch input+span {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 25px;
+	background: white;
+	box-shadow: inset 0 0 0 0.0625em #ccc;
+	border-radius: 25px;
+	vertical-align: -0.15em;
+	transition: all 0.40s cubic-bezier(.17, .67, .43, .98);
+}
+
+.ios7-switch:active input+span,
+.ios7-switch input+span:active {
+	box-shadow: inset 0 0 0 0.73em #e9e9e9;
+}
+
+.ios7-switch input+span:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	top: 0;
+	left: 0;
+	background: white;
+	box-shadow: inset 0 0 0 0.03em rgba(0, 0, 0, 0.3),
+		0 0 0.05em rgba(0, 0, 0, 0.3),
+		0 0.1em 0.2em rgba(0, 0, 0, 0.3);
+	transition: all 0.25s ease-out;
+}
+
+.ios7-switch:active input+span:after,
+.ios7-switch input+span:active:after {
+	width: 1.15em;
+}
+
+.ios7-switch input:checked+span {
+	box-shadow: inset 0 0 0 20px #1cc0c7;
+}
+
+.ios7-switch input:checked+span:after {
+	left: 25px;
+}
+
+.ios7-switch:active input:checked+span:after,
+.ios7-switch input:checked+span:active:after {
+	left: 0.4375em;
+}
+
+/* accessibility styles */
+.ios7-switch input:focus+span:after {
+	box-shadow: inset 0 0 0 0.03em rgba(0, 0, 0, 0.15),
+		0 0 0.05em rgba(0, 0, 0, 0.08),
+		0 0.1em 0.2em rgba(0, 0, 0, 0.3);
+	background: #fff;
+}
+
+.ios7-switch input:focus+span {
+	box-shadow: inset 0 0 0 0.0625em #dadada;
+}
+
+.ios7-switch input:focus:checked+span {
+	box-shadow: inset 0 0 0 20px #1cc0c7;
+}
+
+/* reset accessibility style on hover */
+.ios7-switch:hover input:focus+span:after {
+	box-shadow: inset 0 0 0 0.03em rgba(0, 0, 0, 0.1),
+		0 0 0.05em rgba(0, 0, 0, 0.05),
+		0 0.1em 0.2em rgba(0, 0, 0, 0.2);
+	background: #fff;
+}
+
+.ios7-switch:hover input:focus+span {
+	box-shadow: inset 0 0 0 0.0625em #e9e9e9;
+}
+
+.ios7-switch:hover input:focus:checked+span {
+	box-shadow: inset 0 0 0 20px #1cc0c7;
 }
