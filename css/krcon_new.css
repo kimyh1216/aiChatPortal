@@ -1,0 +1,65 @@
+.krcon {
+	overflow-y: auto;
+	height: 100%;
+	padding: 30px 140px 50px;
+	display: flex;
+	flex-direction: column;
+
+	.logo {
+		text-align: center;
+	}
+
+	.document_list {
+		width: 1040px;
+		margin: 0 auto;
+
+		h2 {
+			line-height: 30px;
+			margin-top: 32px;
+			font-size: 1.375rem;
+			font-weight: 700;
+			padding-left: 30px;
+			background: url(../imgs/ico_note.png) no-repeat left center;
+		}
+
+		ul {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 30px;
+			width: 915px;
+			margin: 20px auto 0;
+
+			li {
+				a {
+					display: block;
+					min-height: 140px;
+					padding: 20px 25px;
+					text-decoration: none;
+					border: 1px solid #d8d8d8;
+					border-radius: 8px;
+					transition: 0.3s all;
+
+					&:hover {
+						border-color: #999;
+					}
+
+					h3 {
+						line-height: 18px;
+						padding-left: 25px;
+						color: #232323;
+						font-weight: 700;
+						background: url(../imgs/ico_clipboard.png) no-repeat left center;
+					}
+
+					p {
+						line-height: 1.3;
+						margin-top: 20px;
+						color: #595959;
+						font-size: 0.9375rem;
+					}
+				}
+			}
+		}
+	}
+}
