@@ -37,15 +37,105 @@
 				<button class="btn-newChat"></button>
 			</div>
 			<ul>
-				<li class="header">
+				<li class="header ">
 					Advanced Search
+					<button class="btn-reload"></button>
 				</li>
-				<li class="cnt" style="height: 200px;">
+				<li class="cnt adv_open scrollbar">
+					<div class="filter_list">
+						<div class="flt_title">
+							Convention Documents
+						</div>
+						<ul>
+							<li>
+								<input type="checkbox" /><label>- All</label>
+								<ul class="open">
+									<li>
+										<input type="checkbox" /><label>- SOLAS</label>
+										<ul class="open">
+											<li>
+												<input type="checkbox" /><label>Amendment Status<button
+														class="btn-summary"></button></label>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" /><label>+ MARPOL</label>
+									</li>
+									<li>
+										<input type="checkbox" /><label>+ AFS Convention</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="flt_title">
+							IMO Document
+						</div>
+						<ul>
+							<li>
+								<input type="checkbox" /><label>- All</label>
+								<ul class="open">
+									<li>
+										<input type="checkbox" /><label>- ASSEMBLY</label>
+										<ul class="open">
+											<li>
+												<input type="checkbox" /><label>+ 33</label>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" /><label>+ COUNCIL</label>
+									</li>
+									<li>
+										<input type="checkbox" /><label>+ CONFERRENCE</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="flt_title">
+							Ship Status <button class="btn-information">
+								<div class="modalCloud show">Ship Status일 경우 설명글이 들어갑니다.</div>
+							</button>
+						</div>
+						<ul class="select">
+							<li>
+								<input type="checkbox" /><label>Ship Type</label>
+								<select>
+									<option>All Ships</option>
+									<option>Ships Type 01</option>
+									<option>Ships Type 02</option>
+									<option>Ships Type 03</option>
+									<option>Ships Type 04</option>
+									<option>Ships Type 05</option>
+								</select>
+							</li>
+							<li>
+								<input type="checkbox" /><label>Construction Date (K/L)</label>
+								<input type="date">
+							</li>
+							<li>
+								<input type="checkbox" /><label>Current Date</label>
+								<input type="date">
+							</li>
+						</ul>
+						<div class="flt_title">
+							Convention Today <button class="btn-information">
+								<div class="modalCloud show">IMO Document에는 적용되지 않는 필터입니다.</div>
+							</button>
+						</div>
+						<ul class="select">
+							<li>
+								<input type="checkbox" /><label>Effective Date</label>
+								<input type="date">
+								<input type="date">
+							</li>
+						</ul>
+					</div>
 				</li>
-				<li class="header open">
+				<li class="header">
 					History
 				</li>
-				<li class="cnt">
+				<li class="cnt scrollbar hide">
 					<ul>
 						<li class="time">어제</li>
 						<li>
@@ -83,6 +173,48 @@
 									<li><a href="#"><span class="ico delete"></span>Delete</a></li>
 								</ul>
 							</div>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
 						</li>
 						<li>
 							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
@@ -212,7 +344,57 @@
 					<div class="msg_tool">
 						<ul>
 							<li><button class="btn-attach"></button></li>
-							<li><button class="btn-setting"></button></li>
+							<li>
+								<button class="btn-setting"></button>
+								<div class="modalCloud show">
+									<div class="info preference">
+										<div class="data">
+											<ul>
+												<li>
+													<span class="tit">Temperature</span>
+													<span class="value">
+														<select>
+															<option value="a">보다 창의적</option>
+															<option value="b">보다 창의적</option>
+															<option value="c">보다 창의적</option>
+															<option value="d">보다 창의적</option>
+														</select>
+													</span>
+												</li>
+												<li>
+													<span class="tit">Position</span>
+													<span class="value">
+														<select>
+															<option value="a">한국어</option>
+															<option value="b">영어</option>
+															<option value="c">일본어</option>
+															<option value="d">중국어</option>
+														</select>
+													</span>
+												</li>
+												<li>
+													<span class="tit">Department</span>
+													<span class="value">
+														<label class="ios7-switch">
+															<input type="checkbox" checked>
+															<span></span>
+														</label>
+													</span>
+												</li>
+												<li>
+													<span class="tit">Delete all chat</span>
+													<span class="value">
+														<label class="ios7-switch">
+															<input type="checkbox">
+															<span></span>
+														</label>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
 							<li><button class="btn-rec"></button></li>
 							<li><button class="btn-send"></button></li>
 						</ul>
@@ -227,84 +409,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="dimmed active"></div>
-	<div class="myInfo active">
-		<button class="btn-close"></button>
-		<div class="info my_info">
-			<h1 class="title">My Info</h1>
-			<div class="data">
-				<ul>
-					<li>
-						<span class="tit">Name</span>
-						<span class="value">John Doe</span>
-					</li>
-					<li>
-						<span class="tit">Position</span>
-						<span class="value">Senoir Engineer</span>
-					</li>
-					<li>
-						<span class="tit">Department</span>
-						<span class="value">DT Team</span>
-					</li>
-					<li>
-						<span class="tit">Delete all chat</span>
-						<button class="btn-request">Delete all</button>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="info preference">
-			<h1 class="title">Preference</h1>
-			<div class="data">
-				<ul>
-					<li>
-						<span class="tit">Temperature</span>
-						<span class="value">
-							<select>
-								<option value="a">보다 창의적</option>
-								<option value="b">보다 창의적</option>
-								<option value="c">보다 창의적</option>
-								<option value="d">보다 창의적</option>
-							</select>
-						</span>
-					</li>
-					<li>
-						<span class="tit">Position</span>
-						<span class="value">
-							<select>
-								<option value="a">한국어</option>
-								<option value="b">영어</option>
-								<option value="c">일본어</option>
-								<option value="d">중국어</option>
-							</select>
-						</span>
-					</li>
-					<li>
-						<span class="tit">Department</span>
-						<span class="value">
-							<label class="ios7-switch">
-								<input type="checkbox" checked>
-								<span></span>
-							</label>
-						</span>
-					</li>
-					<li>
-						<span class="tit">Delete all chat</span>
-						<span class="value">
-							<label class="ios7-switch">
-								<input type="checkbox">
-								<span></span>
-							</label>
-						</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer">
-			<button class="btn-confirm ico-save">Save</button>
-		</div>
-	</div>
-
 </body>
 
 </html>

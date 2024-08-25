@@ -45,11 +45,11 @@
 					}
 
 					h3 {
-						line-height: 18px;
+						line-height: 20px;
 						padding-left: 25px;
 						color: #232323;
 						font-weight: 700;
-						background: url(../imgs/ico_clipboard.png) no-repeat left center;
+						background: url(../imgs/ico_clipboard.png) no-repeat left 0px;
 					}
 
 					p {

@@ -37,15 +37,69 @@
 				<button class="btn-newChat"></button>
 			</div>
 			<ul>
-				<li class="header">
+				<li class="header ">
 					Advanced Search
+					<button class="btn-reload"></button>
 				</li>
-				<li class="cnt" style="height: 200px;">
+				<li class="cnt adv_open scrollbar">
+					<div class="filter_list">
+						<div class="flt_title">공문</div>
+						<ul>
+							<li>
+								<input type="checkbox" /><label>Sent</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>Received</label>
+							</li>
+						</ul>
+						<div class="flt_title">규정</div>
+						<ul>
+							<li>
+								<input type="checkbox" /><label>+ 조직</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 복부</label>
+							</li>
+						</ul>
+						<div class="flt_title">품질문서</div>
+						<ul>
+							<li>
+								<input type="checkbox" /><label>+ QHSE 매뉴얼</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 절차서 (Q,HSE)</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 절차서 (Q,HSE)</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 절차서 등 (통합본 검색)</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 지침서 (통합본 검색)</label>
+							</li>
+						</ul>
+						<div class="flt_title">게시판</div>
+						<ul>
+							<li>
+								<input type="checkbox" /><label>+ 사내정보 - 공지사항</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 사내정보 - 인사발령</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 보도자료</label>
+							</li>
+							<li>
+								<input type="checkbox" /><label>+ 부서 행사알림</label>
+							</li>
+						</ul>
+					</div>
 				</li>
-				<li class="header open">
+				<li class="header">
 					History
 				</li>
-				<li class="cnt">
+				<li class="cnt scrollbar hide">
 					<ul>
 						<li class="time">어제</li>
 						<li>
@@ -83,6 +137,48 @@
 									<li><a href="#"><span class="ico delete"></span>Delete</a></li>
 								</ul>
 							</div>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
 						</li>
 						<li>
 							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
@@ -212,7 +308,57 @@
 					<div class="msg_tool">
 						<ul>
 							<li><button class="btn-attach"></button></li>
-							<li><button class="btn-setting"></button></li>
+							<li>
+								<button class="btn-setting"></button>
+								<div class="modalCloud show">
+									<div class="info preference">
+										<div class="data">
+											<ul>
+												<li>
+													<span class="tit">Temperature</span>
+													<span class="value">
+														<select>
+															<option value="a">보다 창의적</option>
+															<option value="b">보다 창의적</option>
+															<option value="c">보다 창의적</option>
+															<option value="d">보다 창의적</option>
+														</select>
+													</span>
+												</li>
+												<li>
+													<span class="tit">Position</span>
+													<span class="value">
+														<select>
+															<option value="a">한국어</option>
+															<option value="b">영어</option>
+															<option value="c">일본어</option>
+															<option value="d">중국어</option>
+														</select>
+													</span>
+												</li>
+												<li>
+													<span class="tit">Department</span>
+													<span class="value">
+														<label class="ios7-switch">
+															<input type="checkbox" checked>
+															<span></span>
+														</label>
+													</span>
+												</li>
+												<li>
+													<span class="tit">Delete all chat</span>
+													<span class="value">
+														<label class="ios7-switch">
+															<input type="checkbox">
+															<span></span>
+														</label>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
 							<li><button class="btn-rec"></button></li>
 							<li><button class="btn-send"></button></li>
 						</ul>
@@ -227,84 +373,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="dimmed active"></div>
-	<div class="myInfo active">
-		<button class="btn-close"></button>
-		<div class="info my_info">
-			<h1 class="title">My Info</h1>
-			<div class="data">
-				<ul>
-					<li>
-						<span class="tit">Name</span>
-						<span class="value">John Doe</span>
-					</li>
-					<li>
-						<span class="tit">Position</span>
-						<span class="value">Senoir Engineer</span>
-					</li>
-					<li>
-						<span class="tit">Department</span>
-						<span class="value">DT Team</span>
-					</li>
-					<li>
-						<span class="tit">Delete all chat</span>
-						<button class="btn-request">Delete all</button>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="info preference">
-			<h1 class="title">Preference</h1>
-			<div class="data">
-				<ul>
-					<li>
-						<span class="tit">Temperature</span>
-						<span class="value">
-							<select>
-								<option value="a">보다 창의적</option>
-								<option value="b">보다 창의적</option>
-								<option value="c">보다 창의적</option>
-								<option value="d">보다 창의적</option>
-							</select>
-						</span>
-					</li>
-					<li>
-						<span class="tit">Position</span>
-						<span class="value">
-							<select>
-								<option value="a">한국어</option>
-								<option value="b">영어</option>
-								<option value="c">일본어</option>
-								<option value="d">중국어</option>
-							</select>
-						</span>
-					</li>
-					<li>
-						<span class="tit">Department</span>
-						<span class="value">
-							<label class="ios7-switch">
-								<input type="checkbox" checked>
-								<span></span>
-							</label>
-						</span>
-					</li>
-					<li>
-						<span class="tit">Delete all chat</span>
-						<span class="value">
-							<label class="ios7-switch">
-								<input type="checkbox">
-								<span></span>
-							</label>
-						</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer">
-			<button class="btn-confirm ico-save">Save</button>
-		</div>
-	</div>
-
 </body>
 
 </html>
