@@ -14,6 +14,23 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
 		$(document).ready(function () {
+			function getSeason() {
+				var today = new Date();
+				var month = today.getMonth() + 1;
+				if (month >= 3 && month <= 5) {
+					return 'spring';
+				} else if (month >= 6 && month <= 8) {
+					return 'summer';
+				} else if (month >= 9 && month <= 11) {
+					return 'autumn';
+				} else {
+					return 'winter';
+				}
+			}
+
+			var season = getSeason();
+			$('.chat_new').removeClass('spring summer autumn winter').addClass(season);
+
 			var swiper = new Swiper(".mySwiper", {
 				initialSlide: 1,
 				effect: "coverflow",
@@ -129,42 +146,42 @@
 			</ul>
 		</aside>
 		<div class="contents">
-			<div class="chat_new">
+			<div class="chat_new summer">
 				<div class="logo">
 					<img src="./imgs/logo_newchat.png" alt="Welcome to AI Chat Portal" />
 				</div>
 				<div class="swiper mySwiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+							<img src="./imgs/ship_01.jpg" />
 							<div class="desc">배우기 쉬운 창의적인 실내 취미는 무엇입니까?</div>
 						</div>
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+							<img src="./imgs/ship_02.jpg" />
 							<div class="desc">상상력을 자극하는 창의적인 글쓰기를 브레인스토밍하세요.</div>
 						</div>
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+							<img src="./imgs/ship_03.jpg" />
 							<div class="desc">자기 관리를 우선시 할 수 있는 방법 에는 어떤 것이 있습니까?</div>
 						</div>
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+							<img src="./imgs/ship_04.jpg" />
 							<div class="desc">배우기 쉬운 창의적인 실내 취미는 무엇입니까?</div>
 						</div>
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+							<img src="./imgs/ship_01.jpg" />
 							<div class="desc">상상력을 자극하는 창의적인 글쓰기를 브레인스토밍하세요.</div>
 						</div>
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+							<img src="./imgs/ship_02.jpg" />
 							<div class="desc">자기 관리를 우선시 할 수 있는 방법 에는 어떤 것이 있습니까?</div>
 						</div>
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+							<img src="./imgs/ship_03.jpg" />
 							<div class="desc">배우기 쉬운 창의적인 실내 취미는 무엇입니까?</div>
 						</div>
 						<div class="swiper-slide">
-							<img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+							<img src="./imgs/ship_04.jpg" />
 							<div class="desc">상상력을 자극하는 창의적인 글쓰기를 브레인스토밍하세요.</div>
 						</div>
 					</div>

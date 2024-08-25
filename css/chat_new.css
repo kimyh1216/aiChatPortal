@@ -5,8 +5,23 @@
 	padding: 100px 140px 50px;
 	display: flex;
 	flex-direction: column;
-	background: url(../imgs/digital-art-style-sea-landscape.jpg);
 	background-size: cover;
+
+	&.spring {
+		background-image: url(../imgs/bg_spring.jpg);
+	}
+
+	&.summer {
+		background-image: url(../imgs/bg_summer.jpg);
+	}
+
+	&.autumn {
+		background-image: url(../imgs/bg_autumn.jpg);
+	}
+
+	&.winter {
+		background-image: url(../imgs/bg_winter.jpg);
+	}
 
 	.logo {
 		text-align: center;
