@@ -5,6 +5,8 @@
 	padding: 100px 140px 50px;
 	display: flex;
 	flex-direction: column;
+	background: url(../imgs/digital-art-style-sea-landscape.jpg);
+	background-size: cover;
 
 	.logo {
 		text-align: center;
