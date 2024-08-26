@@ -226,17 +226,20 @@ header .logo {
 			text-align: center;
 		}
 
-		ul {
+		>ul {
+			height: 100%;
+
 			li {
 				position: relative;
 
 				&.header {
 					display: flex;
 					justify-content: space-between;
+					margin-top: -1px;
 					padding: 10px 30px;
 					font-size: 1rem;
 					font-weight: 500;
-					border: 1px solid rgba(123, 123, 123, .3);
+					border: 1px solid #bcbccd;
 					border-width: 1px 0;
 					color: #4c4c4c;
 
@@ -270,8 +273,8 @@ header .logo {
 					font-size: 0.875rem;
 					padding: 20px 30px;
 
-					&.adv_open {
-						height: calc(100vh - 230px);
+					&.open {
+						height: calc(100vh - 228px);
 					}
 
 					ul {
@@ -292,6 +295,10 @@ header .logo {
 								text-overflow: ellipsis;
 								white-space: nowrap;
 								overflow: hidden;
+
+								&:hover {
+									color: #004db5;
+								}
 
 								&:before {
 									content: "\00B7 "
@@ -329,6 +336,11 @@ header .logo {
 	border-radius: 8px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 	z-index: 20;
+
+	&.bottom {
+		top: auto;
+		bottom: 25px;
+	}
 
 	&.active {
 		display: block;
