@@ -1,7 +1,7 @@
 .cvsn_content {
 	overflow-y: auto;
 	width: 100%;
-	height: calc(100% - 130px);
+	height: calc(100% - 150px);
 	padding: 30px 30px 20px;
 	display: flex;
 	flex-direction: column;
@@ -11,7 +11,7 @@
 		position: absolute;
 		left: 20px;
 		right: 20px;
-		bottom: 130px;
+		bottom: 150px;
 		height: 50px;
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 	}
@@ -52,7 +52,7 @@
 				gap: 24px;
 
 				.ico {
-					width: 40px;
+					min-width: 40px;
 					height: 40px;
 					margin-top: 10px;
 					background-repeat: no-repeat;
@@ -144,7 +144,7 @@
 									display: flex;
 									align-items: center;
 									gap: 4px;
-									margin-top: 5px;
+									margin-top: 8px;
 									padding-left: 15px;
 
 									&::before {
@@ -171,51 +171,92 @@
 									a {
 										display: flex;
 										align-items: center;
-										gap: 4px;
-										color: #004db5;
+										gap: 5px;
+										text-decoration: none;
+
+										&:hover {
+											.file_detail {
+												.file_info {
+													.name {
+														color: #004db5;
+													}
+												}
+											}
+										}
 									}
 
-									.ico {
-										display: inline-block;
-										width: 20px;
-										height: 26px;
-										margin: 0;
-										vertical-align: middle;
+									.thumbnail {
+										overflow: hidden;
+										width: 78px;
+										height: 52px;
+										border: 1px solid #ccc;
+										border-radius: 8px;
 
-										&.doc {
-											background: url(../imgs/ico_attach_doc.png) no-repeat center;
+										img {
+											width: 100%;
+										}
+									}
+
+									.file_detail {
+										display: flex;
+
+										.ico {
+											width: 40px;
+											height: 52px;
+											margin: 0;
+											vertical-align: middle;
+
+											&.doc {
+												background: url(../imgs/ico_attach_doc.png) no-repeat center;
+											}
+
+											&.image {
+												background: url(../imgs/ico_attach_image.png) no-repeat center;
+											}
+
+											&.music {
+												background: url(../imgs/ico_attach_music.png) no-repeat center;
+											}
+
+											&.pdf {
+												background: url(../imgs/ico_attach_pdf.png) no-repeat center;
+											}
+
+											&.text {
+												background: url(../imgs/ico_attach_text.png) no-repeat center;
+											}
+
+											&.txt {
+												background: url(../imgs/ico_attach_txt.png) no-repeat center;
+											}
+
+											&.video {
+												background: url(../imgs/ico_attach_video.png) no-repeat center;
+											}
+
+											&.xls {
+												background: url(../imgs/ico_attach_xls.png) no-repeat center;
+											}
+
+											&.board {
+												background: url(../imgs/ico_attach_board.png) no-repeat center;
+											}
 										}
 
-										&.image {
-											background: url(../imgs/ico_attach_image.png) no-repeat center;
-										}
+										.file_info {
+											margin-left: 10px;
+											padding: 8px 0 0;
 
-										&.music {
-											background: url(../imgs/ico_attach_music.png) no-repeat center;
-										}
+											.name {
+												color: #000;
+											}
 
-										&.pdf {
-											background: url(../imgs/ico_attach_pdf.png) no-repeat center;
-										}
-
-										&.text {
-											background: url(../imgs/ico_attach_text.png) no-repeat center;
-										}
-
-										&.txt {
-											background: url(../imgs/ico_attach_txt.png) no-repeat center;
-										}
-
-										&.video {
-											background: url(../imgs/ico_attach_video.png) no-repeat center;
-										}
-
-										&.xls {
-											background: url(../imgs/ico_attach_xls.png) no-repeat center;
-										}
-
-										&.board {
-											background: url(../imgs/ico_attach_board.png) no-repeat center;
+											.type {
+												text-decoration: none;
+												font-size: 1rem;
+												font-weight: 400;
+												color: #888;
+											}
 										}
 									}
 								}
@@ -352,5 +393,92 @@
 
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+@media (max-width: 414px) {
+	.cvsn_content {
+		height: calc(100% - 111px);
+		padding: 15px 15px 50px;
+
+		&:after {
+			left: 10px;
+			right: 10px;
+			bottom: 111px;
+		}
+
+		.header {
+			padding-bottom: 0;
+
+			.info {
+				.type {
+					font-size: 0.725rem;
+				}
+
+				.cvsn_title {
+					font-size: 1.1rem;
+				}
+			}
+		}
+
+		.stage {
+			padding: 0;
+
+			.dialogue {
+				.chat {
+					gap: 10px;
+
+					&.robot {
+						&.error {
+							.message {
+								flex-direction: column-reverse;
+
+								.reason {
+									padding: 0 0 5px;
+								}
+							}
+						}
+
+						&.tpm {
+							.message {
+								flex-direction: column-reverse;
+
+								.reason {
+									padding: 0 0 5px;
+								}
+							}
+						}
+					}
+
+					.ico {
+						min-width: 30px;
+						margin-top: 0;
+					}
+
+					.message {
+						.inner {
+							width: 100%;
+							min-width: 200px;
+							max-width: 300px;
+							padding: 10px;
+
+							.attachment {
+								ul {
+									li {
+										padding-left: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.btn_download {
+		width: 40px;
+		height: 40px;
+		background-size: cover;
 	}
 }

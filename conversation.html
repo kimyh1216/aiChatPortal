@@ -29,6 +29,7 @@
 				</div>
 			</div>
 			<button class="btn-myInfo"></button>
+			<button class="btn-headerGnb"></button>
 		</div>
 	</header>
 	<div class="mainContainer">
@@ -224,28 +225,56 @@
 									<div class="attachment">
 										<ul>
 											<li>
-												<span class="tit">규정</span><a href="#">
-													<span class="ico doc"></span>
-													<span class="ico image"></span>
-													<span class="ico music"></span>
-													<span class="ico pdf"></span>
-													<span class="ico text"></span>
-													<span class="ico txt"></span>
-													<span class="ico video"></span>
-													<span class="ico xls"></span>
-													4-02
-													여비지급규칙(2023-10-01).pdf</a>
+												<span class="tit">규정</span>
+												<a href="#">
+													<div class="thumbnail">
+														<img src="./imgs/thumbnail_noimage.png" alt="thumbnail" />
+													</div>
+													<div class="file_detail">
+														<span class="ico doc"></span>
+														<div class="file_info">
+															<p class="name">4-02 여비지급규칙(2023-10-01).pdf</p>
+															<p class="type">문서</p>
+														</div>
+													</div>
+												</a>
 											</li>
 											<li>
-												<span class="tit">게시판</span><a href="#"><span
-														class="ico board"></span>여비지급규정 예외규정</a>
+												<span class="tit">규정</span>
+												<a href="#">
+													<div class="thumbnail">
+														<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+													</div>
+													<div class="file_detail">
+														<span class="ico image"></span>
+														<div class="file_info">
+															<p class="name">filename.jpg</p>
+															<p class="type">이미지</p>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<span class="tit">게시판</span>
+												<a href="#">
+													<div class="thumbnail hide">
+														<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+													</div>
+													<div class="file_detail">
+														<span class="ico board"></span>
+														<div class="file_info">
+															<p class="name">여비지급규정 예외규정</p>
+															<p class="type">타입없음</p>
+														</div>
+													</div>
+												</a>
 											</li>
 										</ul>
 									</div>
 									<div class="choose_like">
 										<button class="btn_thumbup on"></button>
 										<button class="btn_thumbdown on"></button>
-										<div class="modalCloud show">
+										<div class="modalCloud">
 											<!-- show로 제어하시면 됩니다. -->
 											<textarea placeholder="비추천 사유를 입력하세요..."></textarea>
 											<button class="btn-close"></button>
@@ -297,19 +326,31 @@
 			</div>
 			<div class="chat_input">
 				<div class="recom_question">
-					<div class="tit">추천질문</div>
-					<button class="btn-recom">부산 출장 여비는 얼마나 나와?</button>
-					<button class="btn-recom">식비는 어떻게 해?</button>
-					<button class="btn-recom">해외 출장의 경우는 어때?</button>
+					<div class="inner">
+						<div class="tit">추천질문</div>
+						<button class="btn-recom">부산 출장 여비는 얼마나 나와?</button>
+						<button class="btn-recom">식비는 어떻게 해?</button>
+						<button class="btn-recom">해외 출장의 경우는 어때?</button>
+					</div>
 				</div>
 				<div class="message">
 					<input type="text" placeholder="여기에 메시지를 입력하세요." />
 					<div class="msg_tool">
 						<ul>
-							<li><button class="btn-attach"></button></li>
+							<li>
+								<button class="btn-attach"></button>
+								<div class="modalCloud show">
+									<div class="attach_image">
+										<div class="tit">이미지 추가</div>
+										<input type="text" placeholder="이미지 또는 링크 붙여넣기" />
+										<a href="#" class="upload">이 디바이스에서 업로드</a>
+										<a href="#" class="photo">사진 찍기</a>
+									</div>
+								</div>
+							</li>
 							<li>
 								<button class="btn-setting"></button>
-								<div class="modalCloud show">
+								<div class="modalCloud">
 									<div class="info preference">
 										<div class="data">
 											<ul>
@@ -362,12 +403,17 @@
 							<li><button class="btn-send"></button></li>
 						</ul>
 					</div>
+					<div class="attach_img show">
+						여기에 사진을 끌어다 놓으세요.
+					</div>
 				</div>
 				<div class="fliters">
-					<div class="btn-filter">10 Category<button class="close"></button></div>
-					<div class="btn-filter">3 Ship Status<button class="close"></button></div>
-					<div class="btn-filter">Convention Today<button class="close"></button></div>
-					<div class="btn-filter bing">Bing Search<button class="close"></button></div>
+					<div class="inner">
+						<div class="btn-filter">10 Category<button class="close"></button></div>
+						<div class="btn-filter">3 Ship Status<button class="close"></button></div>
+						<div class="btn-filter">Convention Today<button class="close"></button></div>
+						<div class="btn-filter bing">Bing Search<button class="close"></button></div>
+					</div>
 				</div>
 			</div>
 		</div>

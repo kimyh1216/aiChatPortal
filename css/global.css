@@ -87,6 +87,11 @@ header .logo {
 	width: 166px;
 	height: 41px;
 	background: url(../imgs/btn_newChat.png) no-repeat center;
+	transition: .5s all;
+
+	&:hover {
+		background-image: url(../imgs/btn_newChat_on.png);
+	}
 }
 
 .btn-more {
@@ -242,6 +247,11 @@ header .logo {
 					border: 1px solid #bcbccd;
 					border-width: 1px 0;
 					color: #4c4c4c;
+					cursor: pointer;
+
+					&:hover {
+						color: #0088c7;
+					}
 
 					.btn-reload {
 						margin-right: 25px;
@@ -811,14 +821,16 @@ header .logo {
 	padding: 5px 70px;
 
 	.recom_question {
-		display: flex;
-		align-items: center;
-		gap: 10px;
+		.inner {
+			display: flex;
+			align-items: center;
+			gap: 10px;
 
-		.tit {
-			margin-right: 10px;
-			font-size: 0.875rem;
-			color: #4f4f4f;
+			.tit {
+				margin-right: 10px;
+				font-size: 0.875rem;
+				color: #4f4f4f;
+			}
 		}
 	}
 
@@ -833,7 +845,7 @@ header .logo {
 		input {
 			width: 100%;
 			height: 100%;
-			padding: 8px 10px;
+			padding: 20px 10px;
 			border: 0;
 			background-color: transparent;
 			outline: 0;
@@ -841,8 +853,9 @@ header .logo {
 
 		.msg_tool {
 			position: absolute;
-			top: 5px;
+			top: 50%;
 			right: 10px;
+			transform: translateY(-50%);
 
 			ul {
 				display: flex;
@@ -852,12 +865,34 @@ header .logo {
 				}
 			}
 		}
+
+		.attach_img {
+			display: none;
+			position: absolute;
+			left: 3px;
+			top: 3px;
+			bottom: 3px;
+			right: 3px;
+			padding-left: 80px;
+			align-items: center;
+			border: 1px dashed #0088c7;
+			border-radius: 8px;
+			font-size: 0.85rem;
+			background: #b5dff3 url(../imgs/ico_addFile.png) no-repeat 50px center;
+			background-size: 20px auto;
+
+			&.show {
+				display: flex;
+			}
+		}
 	}
 
 	.fliters {
-		display: flex;
-		gap: 10px;
-		margin-top: 10px;
+		.inner {
+			display: flex;
+			gap: 10px;
+			margin-top: 10px;
+		}
 	}
 }
 
@@ -865,6 +900,66 @@ header .logo {
 	width: 26px;
 	height: 26px;
 	background: url(../imgs/ico_clip.png) no-repeat center;
+
+	&+.modalCloud {
+		left: -200px;
+		bottom: 37px;
+		width: 310px;
+		height: 150px;
+		padding: 15px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+
+		&:after {
+			top: auto;
+			left: 70%;
+			bottom: -8px;
+			transform: rotate(-180deg);
+		}
+
+		.attach_image {
+			.tit {
+				font-size: 0.875rem;
+			}
+
+			input {
+				margin-bottom: 5px;
+				padding: 7px;
+				background-color: #e3e3e3;
+				border: 1px solid transparent;
+
+				&:focus {
+					background-color: #fff;
+					border: 1px solid #a2c5ff;
+				}
+			}
+
+			a {
+				display: block;
+				text-decoration: none;
+				padding: 8px 0 8px 35px;
+				color: #333;
+
+				&.upload {
+					background: url(../imgs/ico_upload.png) no-repeat 10px center;
+					background-size: 15px auto;
+
+					&:hover {
+						background-color: #e3e3e3;
+					}
+
+				}
+
+				&.photo {
+					background: url(../imgs/ico_camera.png) no-repeat 10px center;
+					background-size: 15px auto;
+
+					&:hover {
+						background-color: #e3e3e3;
+					}
+				}
+			}
+		}
+	}
 
 	&:hover {
 		opacity: .6;
@@ -1048,6 +1143,113 @@ header .logo {
 				width: 190px;
 			}
 
+		}
+	}
+}
+
+.btn-headerGnb {
+	display: none;
+	width: 32px;
+	height: 32px;
+	background: url(../imgs/ico_hamburger.png) no-repeat center;
+	background-size: 20px auto;
+}
+
+@media (max-width: 414px) {
+	header {
+		height: 64px;
+
+		background-position: left center;
+
+		.rButtons {
+			.guage {
+				display: none;
+			}
+
+			.btn-myInfo {
+				display: none;
+			}
+
+			.btn-headerGnb {
+				display: inline-block;
+			}
+		}
+
+		.logo {
+			gap: 5px;
+		}
+	}
+
+	.mainContainer {
+		aside {
+			display: none;
+		}
+
+		.contents {
+			margin-top: 64px;
+			padding-left: 0;
+		}
+	}
+
+	.chat_input {
+		padding: 0 10px 10px;
+
+		.recom_question {
+			display: block;
+			overflow-x: auto;
+
+			.inner {
+				width: max-content;
+			}
+
+			.tit {
+				display: inline-block;
+				min-width: 30px;
+			}
+
+			.btn-recom {
+				display: inline-block;
+			}
+		}
+
+		.message {
+
+			.msg_tool {
+				ul {
+					li {
+						padding: 0;
+						margin: 0 3px;
+					}
+				}
+			}
+		}
+	}
+
+	.btn-attach {
+		width: 20px;
+		background-size: 20px auto;
+	}
+
+	.btn-setting {
+		width: 20px;
+		background-size: 20px auto;
+	}
+
+	.btn-rec {
+		width: 20px;
+		background-size: 20px auto;
+	}
+
+	.btn-send {
+		width: 20px;
+		background-size: 20px auto;
+	}
+
+	.fliters {
+		overflow-x: auto;
+
+		.inner {
+			width: max-content;
 		}
 	}
 }
