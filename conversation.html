@@ -182,7 +182,7 @@
 			</ul>
 		</aside>
 		<div class="contents">
-			<div class="cvsn_content">
+			<div class="cvsn_content scrollbar">
 				<div class="header">
 					<div class="info">
 						<div class="type">
@@ -334,7 +334,7 @@
 					</div>
 				</div>
 				<div class="message">
-					<input type="text" placeholder="여기에 메시지를 입력하세요." />
+					<textarea placeholder="여기에 메시지를 입력하세요."></textarea>
 					<div class="msg_tool">
 						<ul>
 							<li>
@@ -403,7 +403,7 @@
 							<li><button class="btn-send"></button></li>
 						</ul>
 					</div>
-					<div class="attach_img show">
+					<div class="attach_img ">
 						여기에 사진을 끌어다 놓으세요.
 					</div>
 				</div>
@@ -419,5 +419,38 @@
 		</div>
 	</div>
 </body>
+<script>
+	$(document).ready(function () {
+		$('textarea').on('input', function () {
+			// 텍스트 영역의 높이를 자동으로 조정
+			$(this).css('height', 'auto');
+			$(this).css('height', this.scrollHeight + 'px');
+
+			// 부모 요소의 높이도 자동으로 조정
+			const $parent = $(this).closest('.message');
+			if ($parent.length) {
+				$parent.css('height', 'auto');
+				$parent.css('height', $parent[0].scrollHeight + 'px');
+			}
+
+			// 부모의 부모 요소도 자동으로 조정
+			const $grandParent = $parent.closest('.chat_input');
+			if ($grandParent.length) {
+				$grandParent.css('height', 'auto');
+				$grandParent.css('height', $grandParent[0].scrollHeight + 'px');
+			}
+
+			// cvsn_content에 padding-bottom 추가 및 스크롤 이동
+			const $content = $('.cvsn_content');
+			if ($content.length) {
+				const newPaddingBottom = $(this)[0].scrollHeight + 100; // 여유 공간 추가
+				$content.css('padding-bottom', newPaddingBottom + 'px');
+
+				// 스크롤을 아래로 이동
+				$content.scrollTop($content[0].scrollHeight);
+			}
+		});
+	});
+</script>
 
 </html>
