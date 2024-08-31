@@ -331,7 +331,7 @@ header .logo {
 }
 
 .hide {
-	display: none;
+	display: none !important;
 }
 
 .detailBox {
@@ -828,6 +828,16 @@ header .logo {
 	padding: 5px 70px;
 	background-color: #fff;
 
+	&::before {
+		content: "";
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		top: -50px;
+		height: 50px;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+	}
+
 	.recom_question {
 		.inner {
 			display: flex;
@@ -853,26 +863,92 @@ header .logo {
 		border: 2px solid #3389c9;
 		background-color: #fff;
 
-		textarea {
-			resize: none;
-			overflow: hidden;
-			max-height: 50vh;
-			width: 100%;
-			min-height: 78px;
-			padding: 20px 10px;
-			border: 0;
-			background-color: transparent;
+		.msgInner {
+			textarea {
+				resize: none;
+				overflow: hidden;
+				max-height: 50vh;
+				width: 100%;
+				min-height: 38px;
+				padding: 15px 10px 0;
+				border: 0;
+				background-color: transparent;
 
-			&:focus {
-				outline: none;
+				&:focus {
+					outline: none;
+				}
 			}
+
+			.thumbnail_images {
+				display: none;
+				gap: 10px;
+				padding: 0 10px 8px;
+
+				&.show {
+					display: flex;
+				}
+
+				.thumbSet {
+					position: relative;
+					width: 78px;
+					height: 52px;
+					border: 1px solid #ccc;
+					border-radius: 8px;
+
+					img {
+						width: 100%;
+						border-radius: 7px;
+					}
+
+					.btn-close {
+						display: none;
+						position: absolute;
+						right: -8px;
+						top: -8px;
+						width: 18px;
+						height: 18px;
+						border: 2px solid #000;
+						border-radius: 20px;
+						background-size: 8px;
+						background-color: #fff;
+						background-image: none;
+
+						&:before,
+						&:after {
+							content: '';
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							width: 80%;
+							height: 2px;
+							background-color: #333;
+							/* 선의 색상 */
+							transform-origin: center;
+						}
+
+						&:before {
+							transform: translate(-50%, -50%) rotate(45deg);
+						}
+
+						&:after {
+							transform: translate(-50%, -50%) rotate(-45deg);
+						}
+					}
+
+					&:hover {
+						.btn-close {
+							display: block;
+						}
+					}
+				}
+			}
+
 		}
 
 		.msg_tool {
 			position: absolute;
-			top: 50%;
+			bottom: 15px;
 			right: 10px;
-			transform: translateY(-50%);
 
 			ul {
 				display: flex;
@@ -891,12 +967,20 @@ header .logo {
 			bottom: 3px;
 			right: 3px;
 			padding-left: 80px;
+			justify-content: center;
 			align-items: center;
 			border: 1px dashed #0088c7;
 			border-radius: 8px;
 			font-size: 0.85rem;
-			background: #b5dff3 url(../imgs/ico_addFile.png) no-repeat 50px center;
-			background-size: 20px auto;
+			background: #b5dff3;
+
+			&::before {
+				content: "";
+				width: 40px;
+				height: 40px;
+				background: url(../imgs/ico_addFile.png) no-repeat center;
+				background-size: cover;
+			}
 
 			&.show {
 				display: flex;
@@ -944,6 +1028,7 @@ header .logo {
 				padding: 7px;
 				background-color: #e3e3e3;
 				border: 1px solid transparent;
+				outline: none;
 
 				&:focus {
 					background-color: #fff;

@@ -334,7 +334,19 @@
 					</div>
 				</div>
 				<div class="message">
-					<textarea placeholder="여기에 메시지를 입력하세요."></textarea>
+					<div class="msgInner">
+						<textarea placeholder="여기에 메시지를 입력하세요."></textarea>
+						<div class="thumbnail_images show"><!-- show를 붙이면 나옵니다. -->
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
+						</div>
+					</div>
 					<div class="msg_tool">
 						<ul>
 							<li>
@@ -403,7 +415,7 @@
 							<li><button class="btn-send"></button></li>
 						</ul>
 					</div>
-					<div class="attach_img ">
+					<div class="attach_img"><!-- show를 붙이면 보입니다.-->
 						여기에 사진을 끌어다 놓으세요.
 					</div>
 				</div>
@@ -422,31 +434,38 @@
 <script>
 	$(document).ready(function () {
 		$('textarea').on('input', function () {
-			// 텍스트 영역의 높이를 자동으로 조정
+			const maxLines = 16; // 최대 줄 수
+			const lineHeight = parseInt($(this).css('line-height')); // 줄 높이 계산
+			const lines = this.value.split('\n').length; // 현재 줄 수 계산
+
+			// 현재 줄 수가 maxLines를 초과하면
+			if (lines > maxLines) {
+				const trimmedText = this.value.split('\n').slice(0, maxLines).join('\n');
+				$(this).val(trimmedText); // 초과된 줄을 제거
+
+				alert("최대 16줄까지만 입력할 수 있습니다.");
+			}
+
 			$(this).css('height', 'auto');
 			$(this).css('height', this.scrollHeight + 'px');
 
-			// 부모 요소의 높이도 자동으로 조정
 			const $parent = $(this).closest('.message');
 			if ($parent.length) {
 				$parent.css('height', 'auto');
-				$parent.css('height', $parent[0].scrollHeight + 'px');
+				$parent.css('height', $parent[0].scrollHeight + 4 + 'px');
 			}
 
-			// 부모의 부모 요소도 자동으로 조정
 			const $grandParent = $parent.closest('.chat_input');
 			if ($grandParent.length) {
 				$grandParent.css('height', 'auto');
 				$grandParent.css('height', $grandParent[0].scrollHeight + 'px');
 			}
 
-			// cvsn_content에 padding-bottom 추가 및 스크롤 이동
 			const $content = $('.cvsn_content');
 			if ($content.length) {
-				const newPaddingBottom = $(this)[0].scrollHeight + 100; // 여유 공간 추가
+				const newPaddingBottom = $(this)[0].scrollHeight + 147; // 여유 공간 추가
 				$content.css('padding-bottom', newPaddingBottom + 'px');
 
-				// 스크롤을 아래로 이동
 				$content.scrollTop($content[0].scrollHeight);
 			}
 		});
