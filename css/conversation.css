@@ -5,6 +5,8 @@
 	padding: 30px 30px 200px;
 	display: flex;
 	flex-direction: column;
+	background: url(../imgs/bg_translate.jpg) no-repeat center;
+	background-size: cover;
 
 	.header {
 		display: flex;
@@ -123,6 +125,7 @@
 						border-radius: 10px;
 						font-size: 0.875rem;
 						color: #6e6e6e;
+						background-color: #fff;
 
 						.attachment {
 							margin-top: 20px;

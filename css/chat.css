@@ -1,0 +1,50 @@
+.chat {
+	overflow-y: auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(../imgs/bg_chat.jpg) no-repeat center;
+	background-size: cover;
+
+	.link {
+		display: flex;
+		gap: 20px;
+
+		a {
+			display: block;
+			flex: 1;
+			border: 3px solid transparent;
+			padding: 20px;
+			border-radius: 16px;
+			text-decoration: none;
+			text-align: center;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+			transition: .4s all;
+
+			&:hover {
+				border-color: #3389c9;
+				border-width: 3px;
+
+				p {
+					&.tit {
+						color: #3389c9;
+					}
+				}
+			}
+
+			p {
+				margin-top: 10px;
+				color: #333;
+
+				&.tit {
+					font-size: 1.25rem;
+					font-weight: 700;
+					transition: .8s all;
+				}
+			}
+		}
+	}
+}
