@@ -1260,9 +1260,9 @@ header .logo {
 	background-size: 20px auto;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 430px) {
 	header {
-		height: 64px;
+		height: 50px;
 		padding-right: 15px;
 
 		background-position: left center;
@@ -1296,12 +1296,14 @@ header .logo {
 	}
 
 	.mainContainer {
+		height: calc(100% - 52px);
+
 		aside {
 			display: none;
 		}
 
 		.contents {
-			margin-top: 64px;
+			margin-top: 50px;
 			padding-left: 0;
 		}
 	}

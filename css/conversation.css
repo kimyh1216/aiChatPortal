@@ -192,6 +192,7 @@
 
 									.file_detail {
 										display: flex;
+										align-items: center;
 
 										.ico {
 											width: 40px;
@@ -389,7 +390,7 @@
 	}
 }
 
-@media (max-width: 414px) {
+@media (max-width: 430px) {
 	.cvsn_content {
 		height: calc(100% - 200px);
 		padding: 15px 15px 50px;
@@ -458,7 +459,7 @@
 							.choose_like {
 								.modalCloud {
 									right: -10px;
-									width: 340px;
+									width: 330px;
 
 									&::after {
 										left: auto;
@@ -471,6 +472,32 @@
 								ul {
 									li {
 										padding-left: 0;
+
+										.thumbnail {
+											min-width: 60px;
+											max-width: 60px;
+											height: 40px;
+										}
+
+										.file_detail {
+											.ico {
+												max-width: 30px;
+												height: 40px;
+												background-size: contain !important;
+											}
+
+											.file_info {
+												margin-left: 5px;
+
+												.name {
+													font-size: 0.75rem;
+												}
+
+												.type {
+													font-size: 0.875rem;
+												}
+											}
+										}
 									}
 								}
 							}
@@ -485,5 +512,17 @@
 		width: 40px;
 		height: 40px;
 		background-size: cover;
+	}
+
+	.btn-attach {
+		&+.modalCloud {
+			left: -246px;
+			bottom: 60px;
+
+			&:after {
+				left: auto;
+				right: 15%;
+			}
+		}
 	}
 }

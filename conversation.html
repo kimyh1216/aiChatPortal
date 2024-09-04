@@ -358,7 +358,7 @@
 						<ul>
 							<li>
 								<button class="btn-attach"></button>
-								<div class="modalCloud">
+								<div class="modalCloud show">
 									<div class="attach_image">
 										<div class="tit">이미지 추가</div>
 										<input type="text" placeholder="이미지 또는 링크 붙여넣기" />
@@ -440,7 +440,7 @@
 </body>
 <script>
 	$(document).ready(function () {
-		$('textarea').on('input', function () {
+		$('.chat_input textarea').on('input', function () {
 			const maxLines = 10; // 최대 줄 수
 			const lineHeight = parseInt($(this).css('line-height')); // 줄 높이 계산
 			const lines = this.value.split('\n').length; // 현재 줄 수 계산
