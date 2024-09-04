@@ -76,8 +76,7 @@
 					<ul>
 						<li class="time">지난7일</li>
 						<li>
-							<a class="link" href="#">Coolsms API 연동하는 방법 찾기 좀더 글자 길게 하려고</a><button
-								class="btn-more"></button>
+							<a class="link" href="#">Coolsms API 연동하는 방법 찾기 좀더 글자 길게 하려고</a><button class="btn-more"></button>
 							<div class="detailBox">
 								<ul>
 									<li><a href="#"><span class="ico export"></span>Export</a></li>
@@ -274,7 +273,7 @@
 									<div class="choose_like">
 										<button class="btn_thumbup on"></button>
 										<button class="btn_thumbdown on"></button>
-										<div class="modalCloud">
+										<div class="modalCloud show">
 											<!-- show로 제어하시면 됩니다. -->
 											<textarea placeholder="비추천 사유를 입력하세요..."></textarea>
 											<button class="btn-close"></button>
@@ -345,13 +344,21 @@
 								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
 								<button class="btn-close"></button>
 							</div>
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
 						</div>
 					</div>
 					<div class="msg_tool">
 						<ul>
 							<li>
 								<button class="btn-attach"></button>
-								<div class="modalCloud show">
+								<div class="modalCloud">
 									<div class="attach_image">
 										<div class="tit">이미지 추가</div>
 										<input type="text" placeholder="이미지 또는 링크 붙여넣기" />
@@ -434,7 +441,7 @@
 <script>
 	$(document).ready(function () {
 		$('textarea').on('input', function () {
-			const maxLines = 16; // 최대 줄 수
+			const maxLines = 10; // 최대 줄 수
 			const lineHeight = parseInt($(this).css('line-height')); // 줄 높이 계산
 			const lines = this.value.split('\n').length; // 현재 줄 수 계산
 
@@ -443,7 +450,7 @@
 				const trimmedText = this.value.split('\n').slice(0, maxLines).join('\n');
 				$(this).val(trimmedText); // 초과된 줄을 제거
 
-				alert("최대 16줄까지만 입력할 수 있습니다.");
+				alert("최대 " + maxLines + "줄까지만 입력할 수 있습니다.");
 			}
 
 			$(this).css('height', 'auto');
