@@ -3,7 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 	<title>AI Chat Portal</title>
 	<link rel="stylesheet" href="css/global.css" />
 	<link rel="stylesheet" href="css/conversation.css" />
@@ -29,19 +30,32 @@
 				</div>
 			</div>
 			<button class="btn-myInfo"></button>
+			<button class="btn-headerGnb"></button>
 		</div>
 	</header>
 	<div class="mainContainer">
 		<aside>
+			<div class="asideInfo">
+				<div class="guage">
+					<div class="gInner">
+						<canvas width="40" height="40" id="guage2"></canvas>
+						<div id="guage-text2"></div>
+					</div>
+					<div class="modalCloud">
+						총 할당량 100% 중 75%<br />사용하셨습니다.(75%)
+					</div>
+				</div>
+				<button class="btn-myInfo"></button>
+			</div>
 			<div class="newChat">
 				<button class="btn-newChat"></button>
 			</div>
 			<ul>
-				<li class="header ">
+				<li class="header">
 					Advanced Search
 					<button class="btn-reload"></button>
 				</li>
-				<li class="cnt hide scrollbar">
+				<li class="cnt adv_open scrollbar">
 					<div class="filter_list">
 						<div class="flt_title">
 							Convention Documents
@@ -54,8 +68,7 @@
 										<input type="checkbox" /><label>- SOLAS</label>
 										<ul class="open">
 											<li>
-												<input type="checkbox" /><label>Amendment Status<button
-														class="btn-summary"></button></label>
+												<input type="checkbox" /><label>Amendment Status<button class="btn-summary"></button></label>
 											</li>
 										</ul>
 									</li>
@@ -135,7 +148,7 @@
 				<li class="header">
 					History
 				</li>
-				<li class="cnt open scrollbar">
+				<li class="cnt scrollbar hide">
 					<ul>
 						<li class="time">어제</li>
 						<li>
@@ -164,8 +177,7 @@
 					<ul>
 						<li class="time">지난7일</li>
 						<li>
-							<a class="link" href="#">Coolsms API 연동하는 방법 찾기 좀더 글자 길게 하려고</a><button
-								class="btn-more"></button>
+							<a class="link" href="#">Coolsms API 연동하는 방법 찾기 좀더 글자 길게 하려고</a><button class="btn-more"></button>
 							<div class="detailBox">
 								<ul>
 									<li><a href="#"><span class="ico export"></span>Export</a></li>
@@ -222,30 +234,12 @@
 						<li>
 							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
 						</li>
-						<li>
-							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
-						</li>
-						<li>
-							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
-						</li>
-						<li>
-							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
-						</li>
-						<li>
-							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
-						</li>
-						<li>
-							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
-						</li>
-						<li>
-							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
-						</li>
 					</ul>
 				</li>
 			</ul>
 		</aside>
 		<div class="contents">
-			<div class="cvsn_content">
+			<div class="cvsn_content scrollbar">
 				<div class="header">
 					<div class="info">
 						<div class="type">
@@ -288,18 +282,55 @@
 									<div class="attachment">
 										<ul>
 											<li>
-												<span class="tit">규정</span><a href="#"><span class="ico pdf"></span>4-02
-													여비지급규칙(2023-10-01).pdf</a>
+												<span class="tit">규정</span>
+												<a href="#">
+													<div class="thumbnail">
+														<img src="./imgs/thumbnail_noimage.png" alt="thumbnail" />
+													</div>
+													<div class="file_detail">
+														<span class="ico doc"></span>
+														<div class="file_info">
+															<p class="name">4-02 여비지급규칙(2023-10-01).pdf</p>
+															<p class="type">문서</p>
+														</div>
+													</div>
+												</a>
 											</li>
 											<li>
-												<span class="tit">게시판</span><a href="#"><span
-														class="ico board"></span>여비지급규정 예외규정</a>
+												<span class="tit">규정</span>
+												<a href="#">
+													<div class="thumbnail">
+														<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+													</div>
+													<div class="file_detail">
+														<span class="ico image"></span>
+														<div class="file_info">
+															<p class="name">filename.jpg</p>
+															<p class="type">이미지</p>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<span class="tit">게시판</span>
+												<a href="#">
+													<div class="thumbnail hide">
+														<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+													</div>
+													<div class="file_detail">
+														<span class="ico board"></span>
+														<div class="file_info">
+															<p class="name">여비지급규정 예외규정</p>
+															<p class="type">타입없음</p>
+														</div>
+													</div>
+												</a>
 											</li>
 										</ul>
 									</div>
 									<div class="choose_like">
-										<button class="btn_thumbup"></button>
-										<button class="btn_thumbdown"></button>
+										<button class="btn_thumbup on"></button>
+										<button class="btn_thumbdown on"></button>
 										<div class="modalCloud show">
 											<!-- show로 제어하시면 됩니다. -->
 											<textarea placeholder="비추천 사유를 입력하세요..."></textarea>
@@ -352,19 +383,51 @@
 			</div>
 			<div class="chat_input">
 				<div class="recom_question">
-					<div class="tit">추천질문</div>
-					<button class="btn-recom">부산 출장 여비는 얼마나 나와?</button>
-					<button class="btn-recom">식비는 어떻게 해?</button>
-					<button class="btn-recom">해외 출장의 경우는 어때?</button>
+					<div class="inner">
+						<div class="tit">추천질문</div>
+						<button class="btn-recom">부산 출장 여비는 얼마나 나와?</button>
+						<button class="btn-recom">식비는 어떻게 해?</button>
+						<button class="btn-recom">해외 출장의 경우는 어때?</button>
+					</div>
 				</div>
 				<div class="message">
-					<input type="text" placeholder="여기에 메시지를 입력하세요." />
+					<div class="msgInner">
+						<textarea placeholder="여기에 메시지를 입력하세요."></textarea>
+						<div class="thumbnail_images show"><!-- show를 붙이면 나옵니다. -->
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
+							<div class="thumbSet">
+								<img src="./imgs/temp_thumbnail.png" alt="thumbnail" />
+								<button class="btn-close"></button>
+							</div>
+						</div>
+					</div>
 					<div class="msg_tool">
 						<ul>
-							<li><button class="btn-attach"></button></li>
+							<li>
+								<button class="btn-attach"></button>
+								<div class="modalCloud show">
+									<div class="attach_image">
+										<div class="tit">이미지 추가</div>
+										<input type="text" placeholder="이미지 또는 링크 붙여넣기" />
+										<a href="#" class="upload">이 디바이스에서 업로드</a>
+										<a href="#" class="photo">사진 찍기</a>
+									</div>
+								</div>
+							</li>
 							<li>
 								<button class="btn-setting"></button>
-								<div class="modalCloud show">
+								<div class="modalCloud">
 									<div class="info preference">
 										<div class="data">
 											<ul>
@@ -417,12 +480,17 @@
 							<li><button class="btn-send"></button></li>
 						</ul>
 					</div>
+					<div class="attach_img"><!-- show를 붙이면 보입니다.-->
+						여기에 사진을 끌어다 놓으세요.
+					</div>
 				</div>
 				<div class="fliters">
-					<div class="btn-filter">10 Category<button class="close"></button></div>
-					<div class="btn-filter">3 Ship Status<button class="close"></button></div>
-					<div class="btn-filter">Convention Today<button class="close"></button></div>
-					<div class="btn-filter bing">Bing Search<button class="close"></button></div>
+					<div class="inner">
+						<div class="btn-filter">10 Category<button class="close"></button></div>
+						<div class="btn-filter">3 Ship Status<button class="close"></button></div>
+						<div class="btn-filter">Convention Today<button class="close"></button></div>
+						<div class="btn-filter bing">Bing Search<button class="close"></button></div>
+					</div>
 				</div>
 			</div>
 		</div>

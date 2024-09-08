@@ -28,10 +28,23 @@
 				</div>
 			</div>
 			<button class="btn-myInfo"></button>
+			<button class="btn-headerGnb"></button>
 		</div>
 	</header>
 	<div class="mainContainer">
 		<aside>
+			<div class="asideInfo">
+				<div class="guage">
+					<div class="gInner">
+						<canvas width="40" height="40" id="guage2"></canvas>
+						<div id="guage-text2"></div>
+					</div>
+					<div class="modalCloud">
+						총 할당량 100% 중 75%<br />사용하셨습니다.(75%)
+					</div>
+				</div>
+				<button class="btn-myInfo"></button>
+			</div>
 			<div class="newChat">
 				<button class="btn-newChat"></button>
 			</div>
@@ -39,23 +52,142 @@
 				<li class="header">
 					Advanced Search
 				</li>
-				<li class="cnt" style="height: 200px;">
+				<li class="cnt hide">
+					<!-- open:열기, hide:닫기, scrollbar는 길어질경우 추가 -->
 				</li>
 				<li class="header open">
 					History
 				</li>
-				<li class="cnt">
+				<li class="cnt open scrollbar">
 					<ul>
 						<li class="time">어제</li>
-						<li>Centerd Windows Javascript Code was good
+						<li>
+							<a class="link" href="#">Centerd Windows Javascript Code was good</a>
 							<button class="btn-more"></button>
+							<div class="detailBox active">
+								<ul>
+									<li><a href="#"><span class="ico export"></span>
+											<p>Export</p>
+										</a></li>
+									<li><a href="#"><span class="ico rename"></span>
+											<p>Rename</p>
+										</a></li>
+									<li><a href="#"><span class="ico delete"></span>
+											<p>Delete</p>
+										</a></li>
+									<li>
+										<a href="#"><span class="ico delete"></span>
+											<p>if Long Text Long Text</p>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</li>
 					</ul>
 					<ul>
 						<li class="time">지난7일</li>
-						<li>Coolsms API 연동하는 방법 찾기 좀더 글자 길게 하려고<button class="btn-more"></button></li>
-						<li>PHP in HTML Files<button class="btn-more"></button></li>
-						<li>그누보드 SMS 플러그인<button class="btn-more"></button></li>
+						<li>
+							<a class="link" href="#">Coolsms API 연동하는 방법 찾기 좀더 글자 길게 하려고</a><button
+								class="btn-more"></button>
+							<div class="detailBox">
+								<ul>
+									<li><a href="#"><span class="ico export"></span>Export</a></li>
+									<li><a href="#"><span class="ico rename"></span>Rename</a></li>
+									<li><a href="#"><span class="ico delete"></span>Delete</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">PHP in HTML Files</a><button class="btn-more"></button>
+						</li>
+						<li>
+							<a class="link" href="#">그누보드 SMS 플러그인</a><button class="btn-more"></button>
+							<div class="detailBox bottom active">
+								<!-- 아래쪽에 위치한것은 절대위치를 잡아 계산 후 bottom을 붙여주시면 됩니다. -->
+								<ul>
+									<li><a href="#"><span class="ico export"></span>
+											<p>Export</p>
+										</a></li>
+									<li><a href="#"><span class="ico rename"></span>
+											<p>Rename</p>
+										</a></li>
+									<li><a href="#"><span class="ico delete"></span>
+											<p>Delete</p>
+										</a></li>
+									<li>
+										<a href="#"><span class="ico delete"></span>
+											<p>if Long Text Long Text</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</li>
 			</ul>

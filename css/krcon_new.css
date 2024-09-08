@@ -63,3 +63,30 @@
 		}
 	}
 }
+
+@media (max-width: 430px) {
+	header {
+		.lefty {
+			.top_menu {
+				a {
+					border: 1px solid #ccc;
+				}
+			}
+		}
+	}
+
+	.krcon {
+		padding: 70px 20px 20px;
+
+		.document_list {
+			width: auto;
+
+			ul {
+				width: auto;
+				gap: 10px;
+				grid-template-columns: repeat(1, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+			}
+		}
+	}
+}

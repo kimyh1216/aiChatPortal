@@ -291,14 +291,14 @@ header .logo {
 				}
 
 				&.cnt {
-					height: calc(100vh - 430px);
+					height: calc(100vh - 230px);
 					overflow-x: hidden;
 					overflow-y: auto;
 					font-size: 0.875rem;
 					padding: 20px 30px;
 
 					&.open {
-						height: calc(100vh - 228px);
+						height: calc(100vh - 234px);
 					}
 
 					ul {
@@ -882,8 +882,8 @@ header .logo {
 				resize: none;
 				overflow: hidden;
 				max-height: 50vh;
-				width: 142%;
-				min-height: 38px;
+				width: 115%;
+				min-height: 60px;
 				padding: 15px 10px 0;
 				border: 0;
 				background-color: transparent;
@@ -906,7 +906,7 @@ header .logo {
 
 				.thumbSet {
 					position: relative;
-					min-width: 78px;
+					width: 78px;
 					height: 52px;
 					border: 1px solid #ccc;
 					border-radius: 8px;
@@ -1337,7 +1337,24 @@ header .logo {
 			top: 50px;
 			z-index: 100;
 
+			ul {
+				li {
+					&.cnt {
+						height: calc(100vh - 245px);
+
+						&.adv_open {
+							height: calc(100vh - 331px);
+						}
+
+						&.open {
+							height: calc(100vh - 331px);
+						}
+					}
+				}
+			}
+
 			&.open {
+				min-width: 320px;
 				margin-left: 0;
 
 				.asideInfo {
@@ -1351,6 +1368,7 @@ header .logo {
 		}
 
 		.contents {
+			min-width: 360px;
 			margin-top: 50px;
 			padding-left: 0;
 		}
@@ -1384,6 +1402,14 @@ header .logo {
 
 		.message {
 			padding-right: 100px;
+
+			.msgInner {
+				.thumbnail_images {
+					.thumbSet {
+						min-width: 78px;
+					}
+				}
+			}
 
 			.msg_tool {
 				ul {
@@ -1426,5 +1452,62 @@ header .logo {
 		.inner {
 			width: max-content;
 		}
+	}
+
+	.myInfo {
+		width: 90%;
+
+		padding: 40px 15px;
+
+		.info {
+			.title {
+				width: 90px;
+				font-size: 1rem;
+			}
+
+			.data {
+				ul {
+					li {
+						font-size: 0.765rem;
+					}
+				}
+			}
+		}
+
+		.footer {
+			padding-right: 15px;
+		}
+	}
+
+	.tokenUsage {
+		width: 90%;
+		height: 530px;
+		padding: 40px 15px;
+
+		.info {
+			.title {
+				width: 90px;
+				font-size: 1rem;
+			}
+		}
+
+		.useage {
+			.graph {
+				ul {
+					li {
+						font-size: 0.765rem;
+
+						.days {
+							font-size: 0.75rem;
+						}
+					}
+				}
+			}
+		}
+
+		.footer {
+			padding-right: 15px;
+		}
+
 	}
 }

@@ -1,95 +1,97 @@
 .translate_wrap {
 	overflow-y: auto;
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	padding: 60px 140px 160px;
+	padding: 60px 100px 20px;
 	background: url(../imgs/bg_translate.jpg) no-repeat center;
 	background-size: cover;
 
-	h3 {
-		font-weight: 700;
-		font-size: 1.25rem;
-	}
+	.translate_inner {
+		display: flex;
 
-	textarea {
-		width: 100%;
-		height: 100%;
-		margin-top: 10px;
-		padding: 20px;
-		border-radius: 10px;
-		font-family: "Spoqa Han Sans Neo";
-		font-size: 18px;
-		outline: none;
-		border: 1px solid #9d9d9d;
-		resize: none;
-		background-color: rgba(255, 255, 255, .5);
-
-		&:focus {
-			border: 1px solid #232323;
+		h3 {
+			font-weight: 700;
+			font-size: 1.25rem;
 		}
-
-		&::-webkit-scrollbar {
-			width: 6px;
-		}
-
-		&::-webkit-scrollbar-track {
-			background-color: transparent;
-		}
-
-		&::-webkit-scrollbar-thumb {
-			background-color: #d0d0d0;
-			border-radius: 20px;
-		}
-
-		&::-webkit-scrollbar-button {
-			display: none;
-		}
-	}
-
-	.trans_content {
-		width: 37%;
-		height: 400px;
-	}
-
-	.vertical_spliter {
-		position: relative;
-		width: 4%;
-		margin-top: 30px;
-
-		&:before {
-			content: "";
-			width: 2px;
-			height: 100%;
-			position: absolute;
-			left: 50%;
-			top: 0;
-			background-color: #ccc;
-			transform: translateX(-50%);
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			width: 10px;
-			height: 45px;
-			background: url(../imgs/ico_splitter_handle.png) no-repeat;
-			transform: translate(-50%, -50%);
-			cursor: grab;
-		}
-	}
-
-	.trans_translated {
-		width: 63%;
 
 		textarea {
-			height: 95%;
+			width: 100%;
+			height: calc(100% - 30px);
+			margin-top: 10px;
+			padding: 20px;
+			border-radius: 10px;
+			font-family: "Spoqa Han Sans Neo";
+			font-size: 18px;
+			outline: none;
+			border: 1px solid #9d9d9d;
+			resize: none;
+			background-color: rgba(255, 255, 255, .5);
+
+			&:focus {
+				border: 1px solid #232323;
+			}
+
+			&::-webkit-scrollbar {
+				width: 6px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: #d0d0d0;
+				border-radius: 20px;
+			}
+
+			&::-webkit-scrollbar-button {
+				display: none;
+			}
+		}
+
+		.trans_content {
+			width: 37%;
+			height: 400px;
+		}
+
+		.vertical_spliter {
+			position: relative;
+			width: 4%;
+			margin-top: 30px;
+
+			&:before {
+				content: "";
+				width: 2px;
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				top: 0;
+				background-color: #ccc;
+				transform: translateX(-50%);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 10px;
+				height: 45px;
+				background: url(../imgs/ico_splitter_handle.png) no-repeat;
+				transform: translate(-50%, -50%);
+				cursor: grab;
+			}
+		}
+
+		.trans_translated {
+			width: calc(100% - 410px);
 		}
 	}
 
 	.trans_setting {
+		width: 36%;
 		margin-top: 15px;
 
 		li {
@@ -141,6 +143,51 @@
 				height: 28px;
 				background: url(../imgs/ico_translate.png) no-repeat;
 			}
+		}
+	}
+}
+
+@media (max-width: 430px) {
+	.translate_wrap {
+		padding: 20px;
+
+		.translate_inner {
+			flex-direction: column;
+			height: 100%;
+
+			textarea {
+				padding: 10px;
+				font-size: 16px;
+			}
+
+			.trans_content {
+				width: 100%;
+				height: 50%;
+			}
+
+			.vertical_spliter {
+				width: 100%;
+				margin-top: 20px;
+
+				&:before {
+					width: 100%;
+					height: 2px;
+				}
+
+				&::after {
+					transform: rotate(90deg);
+					top: -20px;
+				}
+			}
+
+			.trans_translated {
+				width: 100%;
+				height: 50%;
+			}
+		}
+
+		.trans_setting {
+			width: 100%;
 		}
 	}
 }
